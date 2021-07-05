@@ -1,5 +1,6 @@
 <svg>
-  <rect id="background" />
+  <image href="background.jpg" load="sync" opacity="0.20" />
+  <!-- rect id="background" / -->
 
   <g id="clock">
     <text id="clock-hour"      text-anchor="end"   text-length="2" text-buffer="00"/>
@@ -11,8 +12,8 @@
   <g id="hr">
     <text id="hr-zone" text-buffer="-----"/>
     <text id="hr-value" text-buffer="---" />
-    <image id="hr-systole"  href="stat_hr_solid_24px.png" />
-    <image id="hr-diastole" href="stat_hr_solid_24px.png" />
+    <image id="hr-systole"  href="heart-solid.png" />
+    <image id="hr-diastole" href="heart-solid.png" />
   </g>
 
 </svg>
