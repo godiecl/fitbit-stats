@@ -1,0 +1,18 @@
+<svg>
+  <rect id="background" />
+
+  <g id="clock">
+    <text id="clock-hour"      text-anchor="end"   text-length="2" text-buffer="00"/>
+    <text id="clock-separator" text-anchor="start" text-length="1" text-buffer=":" />
+    <text id="clock-minutes"   text-anchor="start" text-length="2" text-buffer="00"/>
+    <text id="clock-seconds"   text-anchor="start" text-length="2" text-buffer="00"/>
+  </g>
+
+  <g id="hr">
+    <text id="hr-zone" text-buffer="-----"/>
+    <text id="hr-value" text-buffer="---" />
+    <image id="hr-systole"  href="stat_hr_solid_24px.png" />
+    <image id="hr-diastole" href="stat_hr_solid_24px.png" />
+  </g>
+
+</svg>
