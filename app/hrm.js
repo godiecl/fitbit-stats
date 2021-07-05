@@ -4,9 +4,6 @@ import document from 'document';
 import { HeartRateSensor } from 'heart-rate';
 import { user } from 'user-profile';
 
-const SHOW = 1;
-const HIDE = 0;
-
 const theZone = document.getElementById('hr-zone');
 const theValue = document.getElementById('hr-value');
 const theDiastole = document.getElementById('hr-diastole');
@@ -47,7 +44,7 @@ export function onScreenOff () {
     if (theBeatingTimer !== null) {
         clearInterval(theBeatingTimer);
         theBeatingTimer = null;
-        theDiastole.style.opacity = HIDE;
+        theDiastole.style.opacity = 0;
     }
     theZone.text = '';
     theValue.text = '';
@@ -93,7 +90,7 @@ function draw (rate) {
         // console.log("Clear animation inside draw!");
         clearInterval(theBeatingTimer);
         theBeatingTimer = null;
-        theDiastole.style.opacity = HIDE;
+        theDiastole.style.opacity = 0;
     }
 
     // Hearbeat animation
@@ -143,11 +140,14 @@ function draw (rate) {
 }
 
 function beating () {
+    theDiastole.style.opacity ^= 1;
+    /*
     if (theDiastole.style.opacity === SHOW) {
         theDiastole.style.opacity = HIDE;
     } else {
         theDiastole.style.opacity = SHOW;
     }
+    */
 }
 
 function getZone (rate, zone) {
