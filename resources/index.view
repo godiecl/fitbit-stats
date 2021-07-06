@@ -1,6 +1,12 @@
 <svg>
-  <image href="background.jpg" load="sync" opacity="0.20" />
+  <image href="background.jpg" load="sync" opacity="0.2" />
   <!-- rect id="background" / -->
+
+  <svg id="battery">  
+    <image id="battery-icon" href="battery.png" />
+    <image id="battery-icon-charge" href="battery_charge.png" />
+    <text id="battery-percent" text-buffer="88%"/>
+  </svg>
 
   <g id="clock">
     <text id="clock-hour"      text-anchor="end"   text-length="2" text-buffer="00"/>

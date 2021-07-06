@@ -4,6 +4,7 @@ import { BodyPresenceSensor } from 'body-presence';
 import { display } from 'display';
 import * as clock from './clock';
 import * as hrm from './hrm';
+import * as battery from './battery';
 
 // Array of sensors
 const sensors = [];
@@ -13,6 +14,8 @@ sensors.push(clock);
 
 // Add the heartbeat
 sensors.push(hrm);
+
+sensors.push(battery);
 
 // Body Presence
 {

@@ -10,6 +10,34 @@
   height: 100%;
 }
 
+#battery-icon {
+  width: 18;
+  height: 18;
+  x: 290;
+  y: 23;
+  fill: white;
+}
+
+#battery-icon-charge {
+  width: 18;
+  height: 18;
+  x:290;
+  y:23;
+  fill: greenyellow;
+  opacity: 0;
+}
+
+#battery-percent {
+  text-anchor: end;
+  font-size: 22;
+  font-family: System-Bold;
+  fill: white;
+  x: 290;
+  y: 40;
+  text-length: 4;
+  font-family: "Tungsten-Medium";
+}
+
 #clock {
   font-family: "Tungsten-Medium";
   fill: 'fb-white';
