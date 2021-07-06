@@ -5,17 +5,19 @@ import { display } from 'display';
 import * as clock from './clock';
 import * as hrm from './hrm';
 import * as battery from './battery';
+import * as calendar from './calendar';
 
 // Array of sensors
 const sensors = [];
 
 // Add the Clock
 sensors.push(clock);
-
 // Add the heartbeat
 sensors.push(hrm);
-
+// The battery
 sensors.push(battery);
+// The calendar
+sensors.push(calendar);
 
 // Body Presence
 {

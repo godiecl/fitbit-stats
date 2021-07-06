@@ -10,30 +10,48 @@
   height: 100%;
 }
 
+#calendar {
+  font-family: "Tungsten-Medium";
+  fill: 'fb-white';
+}
+
+#calendar-day {
+  x: 168;
+  y: 40;
+  font-size: 50;
+  text-anchor: middle;
+}
+
+#calendar-date {
+  x: 168;
+  y: 72;
+  font-size: 40;
+  text-anchor: middle;
+}
+
 #battery-icon {
   width: 18;
   height: 18;
-  x: 290;
-  y: 23;
+  x: 40;
+  y: 300;
   fill: white;
 }
 
 #battery-icon-charge {
   width: 18;
   height: 18;
-  x:290;
-  y:23;
+  x: 40;
+  y: 300;
   fill: greenyellow;
-  opacity: 0;
 }
 
 #battery-percent {
   text-anchor: end;
-  font-size: 22;
+  font-size: 34;
   font-family: System-Bold;
   fill: white;
-  x: 290;
-  y: 40;
+  x: 56;
+  y: 294;
   text-length: 4;
   font-family: "Tungsten-Medium";
 }
@@ -44,7 +62,7 @@
 }
 
 #clock-hour {
-  x: '100%-110';
+  x: '100%-108';
   y: 333;
   font-size: 90;
 }
@@ -73,7 +91,7 @@
 }
 
 #hr-zone {
-  x: 120;
+  x: 114;
   y: 294;
   font-size: 34;
   text-length: 10;
@@ -81,7 +99,7 @@
 }
 
 #hr-value {
-  x: 116;
+  x: 114;
   y: 330;
   font-size: 46;
   text-length: 3;

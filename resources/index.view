@@ -1,12 +1,21 @@
 <svg>
-  <image href="background.jpg" load="sync" opacity="0.2" />
+  <image href="background.jpg" load="sync" opacity="0.3" />
   <!-- rect id="background" / -->
+
+  <g id="calendar">
+    <text id="calendar-day"  text-buffer="WEDNESDAY" />
+    <text id="calendar-date" text-buffer="DECEMBER 16" />
+  </g>
 
   <svg id="battery">  
     <image id="battery-icon" href="battery.png" />
     <image id="battery-icon-charge" href="battery_charge.png" />
     <text id="battery-percent" text-buffer="88%"/>
   </svg>
+
+  <line x1="63" y1="336" x2="63" y2="260" fill="fb-gray" stroke-width="1" />
+  <line x1="0" y1="260" x2="336" y2="260" fill="fb-gray" stroke-width="1" />
+  <line x1="162" y1="260" x2="162" y2="336" fill="fb-gray" stroke-width="1" />
 
   <g id="clock">
     <text id="clock-hour"      text-anchor="end"   text-length="2" text-buffer="00"/>
