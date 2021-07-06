@@ -9,7 +9,7 @@ const theValue = document.getElementById('hr-value');
 const theDiastole = document.getElementById('hr-diastole');
 // const theSystole = document.getElementById('hr-systole');
 
-let lastReading = null;
+let lastTimestamp = null;
 let lastRate = null;
 let theHRS = null;
 let theReadingTimer = null;
@@ -18,8 +18,15 @@ let theBeatingTimer = null;
 export function initialize () {
     theHRS = new HeartRateSensor();
 
+    /*
     theHRS.addEventListener('activate', () => {
         console.log('onActivate HRM!');
+    });
+    */
+
+    theHRS.addEventListener('reading', () => {
+        // console.log('HRM: ' + theHRS.heartRate);
+        setReading(theHRS.heartRate, theHRS.timestamp);
     });
 
     // console.log('HRM Last: ' + theHRS.timestamp);
@@ -28,15 +35,15 @@ export function initialize () {
 export function onScreenOn () {
     if (!theReadingTimer) {
         theHRS.start();
-        getReading();
-        theReadingTimer = setInterval(getReading, 500);
+        // getReading();
+        // theReadingTimer = setInterval(getReading, 500);
     }
 }
 
 export function onScreenOff () {
     theHRS.stop();
     lastRate = null;
-    lastReading = null;
+    lastTimestamp = null;
     if (theReadingTimer !== null) {
         clearInterval(theReadingTimer);
         theReadingTimer = null;
@@ -52,35 +59,35 @@ export function onScreenOff () {
 }
 
 export function onPresent () {
-    console.log(`onPresent: HRS activated: ${theHRS.activated}.`);
+    // console.log(`onPresent: HRS activated: ${theHRS.activated}.`);
     onScreenOn();
 }
 
 export function onAbsent () {
     onScreenOff();
-    theZone.text = 'NO PRESENT';
+    theZone.text = 'NO DATA';
     theZone.style.fill = 'fb-dark-gray';
     theValue.text = '---';
     theValue.style.fill = 'fb-dark-gray';
 }
 
-function getReading () {
-    console.log(`Data: ${theHRS.timestamp}/${lastReading} - ${theHRS.heartRate}/${lastRate}.`);
-    if (theHRS.timestamp === lastReading) {
+function setReading (rate, timestamp) {
+    // console.log(`Data: ${timestamp}/${lastTimestamp} - ${rate}/${lastRate}.`);
+    if (timestamp === lastTimestamp) {
         // Same timestamp
-        console.log('no redraw: same last reading');
+        // console.log('no redraw: same last timestamp');
         return;
     }
-    lastReading = theHRS.timestamp;
+    lastTimestamp = timestamp;
 
-    if (theHRS.heartRate === lastRate) {
+    if (rate === lastRate) {
         // Same rate
-        console.log('no redraw: same last rate');
+        // console.log('no redraw: same last rate');
         return;
     }
-    lastRate = theHRS.heartRate
+    lastRate = rate;
 
-    console.log('redraw !');
+    // console.log(`Redraw with ${lastRate}.`);
     draw(lastRate);
 }
 
