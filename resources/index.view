@@ -40,4 +40,6 @@
     <image id="hr-diastole" href="heart-solid.png" />
   </g>
 
+  <rect id="torch" pointer-events="visible" />
+
 </svg>

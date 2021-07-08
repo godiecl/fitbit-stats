@@ -6,6 +6,7 @@ import * as clock from './clock';
 import * as hrm from './hrm';
 import * as battery from './battery';
 import * as calendar from './calendar';
+import * as torch from './torch.js';
 
 // Array of sensors
 const sensors = [];
@@ -48,3 +49,5 @@ display.addEventListener('change', () => {
 
 // Start
 sensors.map(sensor => sensor.onScreenOn());
+
+torch.initialize();
