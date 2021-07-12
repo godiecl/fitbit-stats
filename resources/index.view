@@ -26,11 +26,11 @@
   </g>
 
   <g transform="translate(50%,50%)">
-    <g id="secs" pointer-events="visible">
-      <line x1="0" y1="4%" x2="0" y2="-49%" stroke-width="2" fill="red" />
+    <g id="clock-seconds-hand" pointer-events="visible">
+      <line id="clock-seconds-hand" x1="0" y1="8%" x2="0" y2="-49%" stroke-width="2" fill="fb-red" />
     </g>
-    <circle id="outercenterdot" cx="0" cy="0" r="6" fill="red" />
-    <circle id="innercenterdot" cx="0" cy="0" r="3" fill="white" />
+    <circle id="outercenterdot" cx="0" cy="0" r="6" fill="fb-red" />
+    <circle id="innercenterdot" cx="0" cy="0" r="3" fill="fb-black" />
   </g>
 
   <g id="hr">
