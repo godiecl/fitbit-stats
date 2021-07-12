@@ -13,7 +13,6 @@ let autoOffTimer = null;
 
 export function initialize () {
   torchEl.addEventListener('mousedown', (evt) => {
-    console.log('Touch!');
     if (torchEnabled) {
       if (firstTouch) {
         if (torchOn) {
