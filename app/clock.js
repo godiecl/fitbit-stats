@@ -1,8 +1,6 @@
-/* eslint-disable semi */
-/* eslint-disable indent */
+/* eslint-disable import/no-unresolved */
 import document from 'document';
 import clock from 'clock';
-import * as util from './utils';
 
 const theClock = document.getElementById('clock');
 const theHour = document.getElementById('clock-hour');
@@ -14,12 +12,31 @@ const theSecondsHand = document.getElementById('clock-seconds-hand');
 // The timer to move the seconds hand
 let theMillisTimer = null;
 
-export function initialize () {
-    clock.granularity = 'seconds';
-    theSeparator.style.display = 'inline'
+function zeroPad(i) {
+  if (i < 10) {
+    return `0${i}`;
+  }
+  return i;
 }
 
-export function onScreenOn () {
+function draw(evt) {
+  // Show the seconds hand
+  theSecondsHand.style.opacity = 1;
+  // Update the hour:minutes:seconds
+  theSeconds.text = zeroPad(evt.date.getSeconds());
+  theMinutes.text = zeroPad(evt.date.getMinutes());
+  theHour.text = evt.date.getHours();
+  // : on/off
+  // eslint-disable-next-line no-bitwise
+  theSeparator.style.opacity ^= 1;
+}
+
+export function initialize() {
+  clock.granularity = 'seconds';
+  theSeparator.style.display = 'inline'
+}
+
+export function onScreenOn() {
   // Start the draw of time
   clock.addEventListener('tick', draw);
 
@@ -30,30 +47,19 @@ export function onScreenOn () {
   }, 100);
 }
 
-export function onScreenOff () {
+export function onScreenOff() {
   clock.removeEventListener('tick', draw);
   theSecondsHand.style.opacity = 0;
   clearInterval(theMillisTimer);
   theMillisTimer = null;
 }
 
-export function onPresent () {
+export function onPresent() {
   theClock.style.fill = 'fb-white';
   theSeconds.style.fill = 'fb-red';
 }
 
-export function onAbsent () {
+export function onAbsent() {
   theClock.style.fill = 'fb-dark-gray';
   theSeconds.style.fill = 'fb-dark-gray';
-}
-
-function draw (evt) {
-  // Show the seconds hand
-  theSecondsHand.style.opacity = 1;
-  // Update the hour:minutes:seconds
-  theSeconds.text = util.zeroPad(evt.date.getSeconds());
-  theMinutes.text = util.zeroPad(evt.date.getMinutes());
-  theHour.text = evt.date.getHours();
-  // : on/off
-  theSeparator.style.opacity ^= 1;
 }
