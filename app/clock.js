@@ -23,7 +23,7 @@ export function onScreenOn () {
   theMillisTimer = setInterval(() => {
     const date = new Date();
     secHand.groupTransform.rotate.angle = 6 * date.getSeconds() + 0.006 * date.getMilliseconds();
-  }, 75);
+  }, 100);
 }
 
 export function onScreenOff () {
