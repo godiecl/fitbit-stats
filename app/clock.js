@@ -11,6 +11,8 @@ const theMinutes = document.getElementById('clock-minutes');
 const theSeconds = document.getElementById('clock-seconds');
 const secHand = document.getElementById('secs');
 
+let theMillisTimer = null;
+
 export function initialize () {
     clock.granularity = 'seconds';
     theSeparator.style.display = 'inline'
@@ -18,11 +20,17 @@ export function initialize () {
 
 export function onScreenOn () {
   clock.addEventListener('tick', draw);
+  theMillisTimer = setInterval(() => {
+    const date = new Date();
+    secHand.groupTransform.rotate.angle = 6 * date.getSeconds() + 0.006 * date.getMilliseconds();
+  }, 75);
 }
 
 export function onScreenOff () {
   clock.removeEventListener('tick', draw);
   secHand.style.opacity = 0;
+  clearInterval(theMillisTimer);
+  theMillisTimer = null;
 }
 
 export function onPresent () {
@@ -41,12 +49,7 @@ function draw (evt) {
   // `${hours}`;
   theSeparator.style.opacity ^= 1;
   // console.log('Show: ' + theSeparator.style.display);
-  const secs = evt.date.getSeconds();
-  const secAngle = secondsToAngle(secs);
-  secHand.groupTransform.rotate.angle = secAngle;
-}
-
-// Returns an angle (0-360) for seconds
-function secondsToAngle (seconds) {
-  return (360 / 60) * seconds;
+  // const secs = evt.date.getSeconds();
+  // const secAngle = secondsToAngle(secs);
+  // secHand.groupTransform.rotate.angle = secAngle;
 }

@@ -27,7 +27,7 @@
 
   <g transform="translate(50%,50%)">
     <g id="secs" pointer-events="visible">
-      <line x1="0" y1="4%" x2="0" y2="-40%" stroke-width="2" fill="red" />
+      <line x1="0" y1="4%" x2="0" y2="-49%" stroke-width="2" fill="red" />
     </g>
     <circle id="outercenterdot" cx="0" cy="0" r="6" fill="red" />
     <circle id="innercenterdot" cx="0" cy="0" r="3" fill="white" />
