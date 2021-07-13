@@ -40,11 +40,18 @@
     <text id="hr-diastole" text-buffer="❤️" />
   </g>
 
-  <g id="suntimes">
+  <g id="suntimes" transform="translate(-10%,-60%)">
     <text id="suntimes-sunrise-icon" text-buffer="☀️" />
     <text id="suntimes-sunrise" text-length="12" text-buffer="--:--" />
     <text id="suntimes-sunset-icon" text-buffer="🌙" />
     <text id="suntimes-sunset" text-length="12" text-buffer="--:--" />
+  </g>
+
+  <g id="barometer" transform="translate(-74%,-60%)">
+    <text id="barometer-pressure-icon" text-buffer="🌀" />
+    <text id="barometer-pressure" text-buffer="1234.5 kPa" />
+    <text id="barometer-altitude-icon" text-buffer="⛰️" />
+    <text id="barometer-altitude" text-buffer="12345" />
   </g>
 
   <rect id="torch" pointer-events="visible" />

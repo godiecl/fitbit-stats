@@ -122,16 +122,18 @@
   font-size: 20;
 }
 
+/* SunTimes ********************************** */
+
 #suntimes {
   font-family: "Tungsten-Medium";
   fill: "fb-white";
-  font-size: 20;
+  font-size: 22;
 }
 
 #suntimes-sunrise-icon {
   x: 318;
   y: 238;
-  font-size: 14;
+  font-size: 16;
 }
 
 #suntimes-sunrise {
@@ -142,11 +144,43 @@
 
 #suntimes-sunset-icon {
   x: 317;
-  y: 256;
-  font-size: 14;
+  y: 257;
+  font-size: 16;
 }
 
 #suntimes-sunset {
+  x: 316;
+  y: 260;
+  text-anchor: end;
+}
+
+/* Barometer ********************************* */
+
+#barometer {
+  font-family: "Tungsten-Medium";
+  fill: "fb-white";
+  font-size: 22;
+}
+
+#barometer-pressure-icon {
+  x: 318;
+  y: 238;
+  font-size: 16;
+}
+
+#barometer-pressure {
+  x: 316;
+  y: 242;
+  text-anchor: end;
+}
+
+#barometer-altitude-icon {
+  x: 317;
+  y: 257;
+  font-size: 16;
+}
+
+#barometer-altitude {
   x: 316;
   y: 260;
   text-anchor: end;

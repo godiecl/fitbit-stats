@@ -8,6 +8,7 @@ import * as battery from './battery';
 import * as calendar from './calendar';
 import * as torch from './torch';
 import * as suntimes from './suntimes';
+import * as barometer from './barometer';
 
 // Array of sensors
 const sensors = [];
@@ -24,6 +25,8 @@ sensors.push(calendar);
 sensors.push(suntimes);
 // Add the Torch
 sensors.push(torch);
+// Add the Barometer
+sensors.push(barometer);
 
 // Body Presence
 {
