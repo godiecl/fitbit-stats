@@ -13,15 +13,15 @@
 #torch {
   x: 0;
   y: 0;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   opacity: 0;
-  fill:white;
+  fill: white;
 }
 
 #calendar {
   font-family: "Tungsten-Medium";
-  fill: 'fb-white';
+  fill: "fb-white";
 }
 
 #calendar-day {
@@ -51,7 +51,7 @@
   height: 18;
   x: 40;
   y: 300;
-  fill: 'fb-aqua';
+  fill: "fb-aqua";
 }
 
 #battery-percent {
@@ -67,11 +67,11 @@
 
 #clock {
   font-family: "Tungsten-Medium";
-  fill: 'fb-white';
+  fill: "fb-white";
 }
 
 #clock-hour {
-  x: '100%-108';
+  x: "100%-108";
   y: 333;
   font-size: 90;
 }
@@ -96,7 +96,7 @@
 
 #hr {
   font-family: "Tungsten-Medium";
-  fill: 'fb-white';
+  fill: "fb-white";
 }
 
 #hr-zone {
@@ -133,28 +133,30 @@
 
 #suntimes {
   font-family: "Tungsten-Medium";
-  fill: 'fb-white';
+  fill: "fb-white";
   font-size: 20;
 }
 
 #suntimes-sunrise-icon {
-  x: 280;
+  x: 318;
   y: 238;
   font-size: 14;
 }
 
 #suntimes-sunrise {
-  x: 298;
+  x: 316;
   y: 242;
+  text-anchor: end;
 }
 
 #suntimes-sunset-icon {
-  x: 280;
+  x: 317;
   y: 256;
-  font-size: 14;  
+  font-size: 14;
 }
 
 #suntimes-sunset {
-  x: 298;
+  x: 316;
   y: 260;
+  text-anchor: end;
 }

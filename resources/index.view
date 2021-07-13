@@ -7,7 +7,7 @@
     <text id="calendar-date" text-buffer="DECEMBER 16" />
   </g>
 
-  <svg id="battery">  
+  <svg id="battery">
     <image id="battery-icon" href="battery.png" />
     <image id="battery-icon-charge" href="battery_charge.png" />
     <text id="battery-percent" text-buffer="88%"/>
@@ -42,9 +42,9 @@
 
   <g id="suntimes">
     <text id="suntimes-sunrise-icon" text-buffer="☀️" text-length="8"/>
-    <text id="suntimes-sunrise" text-length="12" text-buffer="00:00:00" />
+    <text id="suntimes-sunrise" text-length="12" text-buffer="--:--" />
     <text id="suntimes-sunset-icon" text-buffer="🌙" text-length="8" />
-    <text id="suntimes-sunset" text-length="12" text-buffer="00:00:00" />
+    <text id="suntimes-sunset" text-length="12" text-buffer="--:--" />
   </g>
 
   <rect id="torch" pointer-events="visible" />
