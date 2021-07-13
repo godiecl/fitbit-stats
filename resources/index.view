@@ -54,6 +54,8 @@
     <text id="barometer-altitude" text-buffer="12345" />
   </g>
 
+  <text text-buffer="🐱" x="44" y="316" font-size="22" />
+
   <rect id="torch" pointer-events="visible" />
 
 </svg>
