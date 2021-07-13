@@ -40,22 +40,21 @@
 
 #battery-icon {
   x: 44;
-  y: 316;
-  font-size: 20;
+  y: 290;
+  font-size: 22;
 }
 
 #battery-icon-charge {
   x: 44;
-  y: 316;
-  font-size: 20;
+  y: 290;
+  font-size: 22;
 }
 
 #battery-percent {
   text-anchor: end;
   font-size: 34;
-  font-family: System-Bold;
   fill: white;
-  x: 56;
+  x: 44;
   y: 294;
   text-length: 4;
   font-family: "Tungsten-Medium";

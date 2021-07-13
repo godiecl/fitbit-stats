@@ -30,7 +30,7 @@ function getColor(level) {
 
 function refresh() {
     // The value
-    theValue.text = `${battery.chargeLevel}%`;
+    theValue.text = battery.chargeLevel;
     // The line
     theBar.x2 = Math.floor((battery.chargeLevel * 336) / 100);
 
