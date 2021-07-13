@@ -10,14 +10,20 @@ Stats clock face for Fitbit Sense.
   * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
   * [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
   * [Visual Studio IntelliCode](visualstudioexptteam.vscodeintellicode).
-  * [vscode-icons](vscode-icons-team.vscode-icons).   
+  * [vscode-icons](vscode-icons-team.vscode-icons).
+
+### Libraries
+
+* [Fitbit SDK CLI](https://www.npmjs.com/package/@fitbit/sdk-cli).
+* [Fitbit SDK Toolchain](https://www.npmjs.com/package/@fitbit/sdk).
+* [Sunrise-Sunset-Js](https://www.npmjs.com/package/sunrise-sunset-js).
 
 ## Authors
 
 * **Diego Urrutia-Astorga** (mika.cl AT gmail DOT com).
-  * [github/godiecl](https://github.com/godiecl).
+  * Github: [godiecl](https://github.com/godiecl).
   * Webpage: [https://godie.cl](https://godie.cl).
-  * Twitter: [@Godiecl](https://twitter.com/godiecl).
+  * Twitter: [@godiecl](https://twitter.com/godiecl).
 
 ## License
 
