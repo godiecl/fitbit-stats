@@ -113,18 +113,14 @@
 
 #hr-diastole {
   x: 120;
-  y: 296;
-  width: 38;
-  height: 38;
-  fill: red;
+  y: 325;
+  font-size: 34;
 }
 
 #hr-systole {
   x: 127;
-  y: 302;
-  width: 24;
-  height: 24;
-  fill: maroon;
+  y: 320;
+  font-size: 20;
 }
 
 #suntimes {

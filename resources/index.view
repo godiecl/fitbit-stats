@@ -36,14 +36,14 @@
   <g id="hr">
     <text id="hr-zone" text-buffer="-----"/>
     <text id="hr-value" text-buffer="---" />
-    <image id="hr-systole"  href="heart-solid.png" />
-    <image id="hr-diastole" href="heart-solid.png" />
+    <text id="hr-systole" text-buffer="❤️" />
+    <text id="hr-diastole" text-buffer="❤️" />
   </g>
 
   <g id="suntimes">
-    <text id="suntimes-sunrise-icon" text-buffer="☀️" text-length="8"/>
+    <text id="suntimes-sunrise-icon" text-buffer="☀️" />
     <text id="suntimes-sunrise" text-length="12" text-buffer="--:--" />
-    <text id="suntimes-sunset-icon" text-buffer="🌙" text-length="8" />
+    <text id="suntimes-sunset-icon" text-buffer="🌙" />
     <text id="suntimes-sunset" text-length="12" text-buffer="--:--" />
   </g>
 
