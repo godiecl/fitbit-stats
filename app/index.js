@@ -22,6 +22,8 @@ sensors.push(battery);
 sensors.push(calendar);
 // The Suntimes
 sensors.push(suntimes);
+// Add the Torch
+sensors.push(torch);
 
 // Body Presence
 {
@@ -64,6 +66,3 @@ display.addEventListener('change', () => {
 
 // Start
 sensors.map(sensor => sensor.onScreenOn());
-
-// Initialize
-torch.initialize();
