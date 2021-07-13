@@ -37,7 +37,6 @@ function refresh() {
     // The color
     const color = `fb-${getColor(battery.chargeLevel)}`;
     theValue.style.fill = color;
-    theIcon.style.fill = color;
 
     // Change if connected
     if (charger.connected) {

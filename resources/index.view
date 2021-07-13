@@ -8,8 +8,8 @@
   </g>
 
   <svg id="battery">
-    <image id="battery-icon" href="battery.png" />
-    <image id="battery-icon-charge" href="battery_charge.png" />
+    <text id="battery-icon" text-buffer="🔋" />
+    <text id="battery-icon-charge" text-buffer="⚡" />
     <text id="battery-percent" text-buffer="88%"/>
     <line x1="0" y1="262" x2="336" y2="262" fill="fb-dark-gray" stroke-width="1" />
     <line id="battery-bar" x1="0" y1="262" x2="336" y2="262" fill="fb-gray" stroke-width="1" />
