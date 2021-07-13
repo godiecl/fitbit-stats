@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 /* eslint-disable import/no-unresolved */
 import { BodyPresenceSensor } from 'body-presence';
 import { display } from 'display';
@@ -6,6 +7,7 @@ import * as hrm from './hrm';
 import * as battery from './battery';
 import * as calendar from './calendar';
 import * as torch from './torch';
+import * as suntimes from './suntimes';
 
 // Array of sensors
 const sensors = [];
@@ -18,6 +20,8 @@ sensors.push(hrm);
 sensors.push(battery);
 // The calendar
 sensors.push(calendar);
+// The Suntimes
+sensors.push(suntimes);
 
 // Body Presence
 {

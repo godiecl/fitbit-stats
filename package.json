@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "license": "UNLICENSED",
+  "dependencies": {
+    "sunrise-sunset-js": "^2.2.1"
+  },
   "devDependencies": {
     "@fitbit/sdk": "~5.0.2",
     "@fitbit/sdk-cli": "^1.7.3",

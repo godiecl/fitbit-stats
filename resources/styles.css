@@ -130,3 +130,31 @@
   height: 24;
   fill: maroon;
 }
+
+#suntimes {
+  font-family: "Tungsten-Medium";
+  fill: 'fb-white';
+  font-size: 20;
+}
+
+#suntimes-sunrise-icon {
+  x: 280;
+  y: 238;
+  font-size: 14;
+}
+
+#suntimes-sunrise {
+  x: 298;
+  y: 242;
+}
+
+#suntimes-sunset-icon {
+  x: 280;
+  y: 256;
+  font-size: 14;  
+}
+
+#suntimes-sunset {
+  x: 298;
+  y: 260;
+}
