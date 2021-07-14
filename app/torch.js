@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import document from 'document';
-
 import { display } from 'display';
+import { vibration } from "haptics";
 
 const torch = document.getElementById('torch');
 
@@ -10,6 +10,7 @@ let torchOn = false;
 let autoOffTimer = null;
 
 function turnOffTorch() {
+  vibration.stop();
   torch.style.opacity = 0;
   display.brightnessOverride = undefined;
   torchOn = false;
@@ -30,6 +31,7 @@ function turnOnTorch() {
 
 export function initialize() {
   torch.addEventListener('mousedown', () => {
+    vibration.start("bump");
     if (firstTouch) {
       if (torchOn) {
         turnOffTorch();
