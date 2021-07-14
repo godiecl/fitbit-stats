@@ -39,8 +39,6 @@ export function onScreenOff() {
 }
 
 export function onPresent() {
-    // theDay.style.fill = 'fb-dark-gray';
-    theDate.style.fill = 'fb-white';
     draw();
 }
 
