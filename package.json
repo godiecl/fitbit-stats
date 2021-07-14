@@ -1,8 +1,14 @@
 {
   "name": "fitbit-stats",
-  "version": "0.1.0",
+  "description": "The Fitbit Stats Watch Face",
+  "version": "0.2.0",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "author": {
+    "name": "Diego Urrutia-Astorga",
+    "email": "mika.cl@gmail.com",
+    "url": "http://godie.cl"
+  },
   "dependencies": {
     "sunrise-sunset-js": "^2.2.1"
   },
@@ -36,6 +42,7 @@
   },
   "scripts": {
     "build": "fitbit-build",
-    "debug": "fitbit"
+    "fitbit": "fitbit",
+    "lint": "eslint app"
   }
 }
