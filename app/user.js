@@ -11,18 +11,25 @@ export function initialize() {
 }
 
 export function onScreenOn() {
-    theBmr.text = `${user.bmr}`;
-    const bmi = (user.weight / (user.height * user.height)).toFixed(1);
-    theBmi.text = `${bmi}`;
-    theWeight.text = `${user.weight}`;
-    theResting.text = `${user.restingHeartRate}`;
+    theBmr.text = user.bmr;
+    theBmi.text = (user.weight / (user.height * user.height)).toFixed(1);
+    theWeight.text = user.weight;
+    theResting.text = user.restingHeartRate;
 }
 
 export function onScreenOff() {
 }
 
 export function onPresent() {
+    theBmr.style.fill = 'fb-white';
+    theBmi.style.fill = 'fb-white';
+    theWeight.style.fill = 'fb-white';
+    theResting.style.fill = 'fb-white';
 }
 
 export function onAbsent() {
+    theBmr.style.fill = 'fb-dark-gray';
+    theBmi.style.fill = 'fb-dark-gray';
+    theWeight.style.fill = 'fb-dark-gray';
+    theResting.style.fill = 'fb-dark-gray';
 }
