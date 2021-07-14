@@ -10,6 +10,7 @@ import * as torch from './torch';
 import * as suntimes from './suntimes';
 import * as barometer from './barometer';
 import * as activities from './activities';
+import * as user from './user';
 
 // Array of sensors
 const sensors = [];
@@ -30,6 +31,8 @@ sensors.push(torch);
 sensors.push(barometer);
 // Add the Activities
 sensors.push(activities);
+// Add the User
+sensors.push(user);
 
 // Body Presence
 {

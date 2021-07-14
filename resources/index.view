@@ -104,6 +104,26 @@
     <text id="barometer-altitude" text-buffer="12345" />
   </g>
 
+  <g transform="translate(-240,0)">
+    <text class="stats" id="user-bmr">2800</text>
+    <text class="stats-icon">✨</text>
+  </g>
+
+  <g transform="translate(-160,0)">
+    <text class="stats" id="user-bmi">2800</text>
+    <text class="stats-icon">⚖️</text>
+  </g>
+
+  <g transform="translate(-80,0)">
+    <text class="stats" id="user-weight">2800</text>
+    <text class="stats-icon">⏲️</text>
+  </g>
+
+  <g transform="translate(0,0)">
+    <text class="stats" id="user-rhr">2800</text>
+    <text class="stats-icon">❤️</text>
+  </g>
+
   <text text-buffer="🐱" x="44" y="316" font-size="22" />
 
   <rect id="torch" pointer-events="visible" />

@@ -268,3 +268,23 @@
   y: 10;
   text-length: 12;
 }
+
+/* Profile *********************************** */
+
+.stats {
+  x: 300;
+  y: 255;
+  font-size: 22;
+  font-family: "Tungsten-Medium";
+  fill: white;
+  text-anchor: end;
+}
+
+.stats-icon {
+  x: 320;
+  y: 253;
+  font-size: 18;
+  font-family: "Tungsten-Medium";
+  fill: white;
+  text-anchor: end;
+}
