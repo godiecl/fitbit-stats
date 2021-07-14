@@ -38,28 +38,6 @@
   text-anchor: middle;
 }
 
-#battery-icon {
-  x: 44;
-  y: 290;
-  font-size: 22;
-}
-
-#battery-icon-charge {
-  x: 44;
-  y: 290;
-  font-size: 22;
-}
-
-#battery-percent {
-  text-anchor: end;
-  font-size: 34;
-  fill: white;
-  x: 44;
-  y: 294;
-  text-length: 4;
-  font-family: "Tungsten-Medium";
-}
-
 #clock {
   font-family: "Tungsten-Medium";
   fill: "fb-white";
@@ -120,70 +98,6 @@
   x: 127;
   y: 320;
   font-size: 20;
-}
-
-/* SunTimes ********************************** */
-
-#suntimes {
-  font-family: "Tungsten-Medium";
-  fill: "fb-white";
-  font-size: 22;
-}
-
-#suntimes-sunrise-icon {
-  x: 318;
-  y: 238;
-  font-size: 16;
-}
-
-#suntimes-sunrise {
-  x: 316;
-  y: 242;
-  text-anchor: end;
-}
-
-#suntimes-sunset-icon {
-  x: 317;
-  y: 257;
-  font-size: 16;
-}
-
-#suntimes-sunset {
-  x: 316;
-  y: 260;
-  text-anchor: end;
-}
-
-/* Barometer ********************************* */
-
-#barometer {
-  font-family: "Tungsten-Medium";
-  fill: "fb-white";
-  font-size: 22;
-}
-
-#barometer-pressure-icon {
-  x: 318;
-  y: 238;
-  font-size: 16;
-}
-
-#barometer-pressure {
-  x: 316;
-  y: 242;
-  text-anchor: end;
-}
-
-#barometer-altitude-icon {
-  x: 317;
-  y: 257;
-  font-size: 16;
-}
-
-#barometer-altitude {
-  x: 316;
-  y: 260;
-  text-anchor: end;
 }
 
 /* Activities ******************************** */
@@ -271,18 +185,18 @@
 
 /* Profile *********************************** */
 
-.stats {
+.value {
   x: 300;
   y: 255;
-  font-size: 22;
+  font-size: 24;
   font-family: "Tungsten-Medium";
   fill: white;
   text-anchor: end;
 }
 
-.stats-icon {
+.value-icon {
   x: 320;
-  y: 253;
+  y: 252;
   font-size: 18;
   font-family: "Tungsten-Medium";
   fill: white;

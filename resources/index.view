@@ -57,13 +57,15 @@
     <text class="icon">⏳</text>
   </g>
 
-  <svg id="battery">
-    <text id="battery-icon" text-buffer="🔋" />
-    <text id="battery-icon-charge" text-buffer="⚡" />
-    <text id="battery-percent" text-buffer="88"/>
+  <g id="battery">
+    <g transform="translate(-227,0)">
+      <text class="value" id="battery-percent">100</text>
+      <text class="value-icon" id="battery-icon">🔋</text>
+      <text class="value-icon" id="battery-icon-charge">⚡</text>
+    </g>
     <line x1="0" y1="262" x2="336" y2="262" fill="fb-dark-gray" stroke-width="1" />
     <line id="battery-bar" x1="0" y1="262" x2="336" y2="262" fill="fb-gray" stroke-width="1" />
-  </svg>
+  </g>
 
   <!-- line x1="63" y1="336" x2="63" y2="260" fill="fb-gray" stroke-width="1" / -->
   <!-- line x1="162" y1="260" x2="162" y2="336" fill="fb-gray" stroke-width="1" / -->
@@ -90,41 +92,48 @@
     <text id="hr-diastole" text-buffer="❤️" />
   </g>
 
-  <g id="suntimes" transform="translate(-10%,-60%)">
-    <text id="suntimes-sunrise-icon" text-buffer="☀️" />
-    <text id="suntimes-sunrise" text-length="12" text-buffer="--:--" />
-    <text id="suntimes-sunset-icon" text-buffer="🌙" />
-    <text id="suntimes-sunset" text-length="12" text-buffer="--:--" />
+  <g id="sunrise">
+    <g transform="translate(-12,-216)">
+      <text class="value" id="suntimes-sunrise">--:--</text>
+      <text class="value-icon">☀️</text>
+    </g>
+    <g transform="translate(-8,-196)" opacity="1">
+      <text class="value" id="suntimes-sunset">--:--</text>
+      <text class="value-icon">🌙</text>
+    </g>
   </g>
 
-  <g id="barometer" transform="translate(-74%,-60%)">
-    <text id="barometer-pressure-icon" text-buffer="🌀" />
-    <text id="barometer-pressure" text-buffer="1234.5 kPa" />
-    <text id="barometer-altitude-icon" text-buffer="⛰️" />
-    <text id="barometer-altitude" text-buffer="12345" />
+  <g id="barometer">
+    <g transform="translate(-236,-216)">
+      <text class="value" id="barometer-altitude">4800.1</text>
+      <text class="value-icon">⛰️</text>
+    </g>
+    <g transform="translate(-240,-196)">
+      <text class="value" id="barometer-pressure">1234.5</text>
+      <text class="value-icon">🌀</text>
+    </g>
   </g>
 
-  <g transform="translate(-240,0)">
-    <text class="stats" id="user-bmr">2800</text>
-    <text class="stats-icon">✨</text>
+  <g id="user">
+    <g transform="translate(-167,0)">
+      <text class="value" id="user-bmr">2800.8</text>
+      <text class="value-icon">✨</text>
+    </g>
+    <g transform="translate(-106,0)">
+      <text class="value" id="user-bmi">2800.8</text>
+      <text class="value-icon">⚖️</text>
+    </g>
+    <g transform="translate(-42,0)">
+      <text class="value" id="user-weight">2800.8</text>
+      <text class="value-icon">⏲️</text>
+    </g>
+    <g transform="translate(8,0)">
+      <text class="value" id="user-rhr">2800.8</text>
+      <text class="value-icon">❤️</text>
+    </g>
   </g>
 
-  <g transform="translate(-160,0)">
-    <text class="stats" id="user-bmi">2800</text>
-    <text class="stats-icon">⚖️</text>
-  </g>
-
-  <g transform="translate(-80,0)">
-    <text class="stats" id="user-weight">2800</text>
-    <text class="stats-icon">⏲️</text>
-  </g>
-
-  <g transform="translate(0,0)">
-    <text class="stats" id="user-rhr">2800</text>
-    <text class="stats-icon">❤️</text>
-  </g>
-
-  <text text-buffer="🐱" x="44" y="316" font-size="22" />
+  <text text-buffer="🐱" x="44" y="316" font-size="26" />
 
   <rect id="torch" pointer-events="visible" />
 
