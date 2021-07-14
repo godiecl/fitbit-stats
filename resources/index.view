@@ -7,6 +7,56 @@
     <text id="calendar-date" text-buffer="DECEMBER 16" />
   </g>
 
+  <g id="steps" transform="translate(0,80)">
+    <rect class="line"/>
+    <circle class="tgt-no"/>
+    <circle class="tgt-yes"/>
+    <rect class="progress"/>
+    <text class="countGoal" text-length="20" text-anchor="end">32000</text>
+    <text class="count" text-length="20">888</text>
+    <text class="icon">🚶</text>
+  </g>
+
+  <g id="distance" transform="translate(0,112)">
+    <rect class="line"/>
+    <circle class="tgt-no"/>
+    <circle class="tgt-yes"/>
+    <rect class="progress"/>
+    <text class="countGoal" text-length="20" text-anchor="end">32000</text>
+    <text class="count" text-length="20">888</text>
+    <text class="icon">📏</text>
+  </g>
+
+  <g id="calories" transform="translate(0,144)">
+    <rect class="line"/>
+    <circle class="tgt-no"/>
+    <circle class="tgt-yes"/>
+    <rect class="progress"/>
+    <text class="countGoal" text-length="20" text-anchor="end">32000</text>
+    <text class="count" text-length="20">888</text>
+    <text class="icon">🔥</text>
+  </g>
+
+  <g id="elevationGain" transform="translate(0,176)">
+    <rect class="line"/>
+    <circle class="tgt-no"/>
+    <circle class="tgt-yes"/>
+    <rect class="progress"/>
+    <text class="countGoal" text-length="20" text-anchor="end">32000</text>
+    <text class="count" text-length="20">888</text>
+    <text class="icon">🏗️</text>
+  </g>
+
+  <g id="activeZoneMinutes" transform="translate(0,208)">
+    <rect class="line"/>
+    <circle class="tgt-no"/>
+    <circle class="tgt-yes"/>
+    <rect class="progress"/>
+    <text class="countGoal" text-length="20" text-anchor="end">32000</text>
+    <text class="count" text-length="20">888</text>
+    <text class="icon">⏳</text>
+  </g>
+
   <svg id="battery">
     <text id="battery-icon" text-buffer="🔋" />
     <text id="battery-icon-charge" text-buffer="⚡" />
