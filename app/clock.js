@@ -73,9 +73,7 @@ export function onScreenOff() {
 }
 
 export function onPresent() {
-  theTime.style.fill = 'fb-white';
 }
 
 export function onAbsent() {
-  theTime.style.fill = 'fb-dark-gray';
 }

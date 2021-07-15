@@ -12,28 +12,18 @@ const theIconCharge = document.getElementById('battery-icon-charge');
  * @returns the battery color.
  */
 function getColor(level) {
-    if (level <= 8) {
-        return 'red';
-    }
     if (level <= 20) {
-        return 'orange';
+        return 'magenta';
     }
-    if (level <= 38) {
-        return 'peach';
-    }
-    if (level <= 61) {
-        return 'green';
-    }
-    return 'lime';
+    return 'black';
 }
 
 function refresh() {
     // The value
-    theValue.text = battery.chargeLevel;
+    theValue.text = `${battery.chargeLevel}%`;
 
     // The color
-    const color = `fb-${getColor(battery.chargeLevel)}`;
-    theValue.style.fill = color;
+    theValue.style.fill = `fb-${getColor(battery.chargeLevel)}`;
 
     // Change if connected
     if (charger.connected) {

@@ -7,8 +7,8 @@ import { goals, today } from "user-activity";
 const goalTypes = [
     "steps",
     "distance",
-    "elevationGain",
     "calories",
+    "elevationGain",
     "activeZoneMinutes"
 ];
 
@@ -22,12 +22,10 @@ function getElement(prefix) {
         prefix,
         prevValue: null,
         container: element,
-        progress: element.getElementsByClassName("progress")[0],
-        countGoal: element.getElementsByClassName("countGoal")[0],
-        count: element.getElementsByClassName("count")[0],
-        icon: element.getElementsByClassName("icon")[0],
-        tgtYes: element.getElementsByClassName("tgt-yes")[0],
-        tgtNo: element.getElementsByClassName("tgt-no")[0]
+        bar: element.getElementsByClassName("progress-bar")[0],
+        value: element.getElementsByClassName("progress-value")[0],
+        goal: element.getElementsByClassName("progress-goal")[0],
+        icon: element.getElementsByClassName("progress-icon")[0]
     }
 }
 
@@ -50,32 +48,36 @@ function draw(el) {
     el.prevValue = actual;
 
     // Update the values
-    el.count.text = `${actual}`;
-    el.countGoal.text = `${goal}`;
+    el.value.text = `${actual}`;
+    el.goal.text = `${goal}`;
 
     // The progress
     let progress = 0;
     if (goal > 0) {
         progress = 100. * actual / goal;
     }
-    // console.log(`Progress: ${progress}.`);
 
     // Show the spot
     if (progress >= 100) {
         progress = 100;
-        el.tgtYes.style.opacity = 1;
+        el.goal.style.fill = 'fb-gray';
     } else {
-        el.tgtYes.style.opacity = 0;
+        el.goal.style.fill = 'fb-extra-dark-gray';
     }
+    // console.log(`Progress: ${progress}.`);
+
     // Show the width
-    el.progress.width = Math.floor(progressWidth * progress / 100);
+    const height = Math.floor(progressWidth * progress / 100);
+    // console.log(`Height: ${height}`);
+    el.bar.y1 = 172 - height;
 }
 
 export function initialize() {
     // goalTypes.map(type => console.log(`Type: ${type}`));
     goalTypes.map(type => elements.push(getElement(type)));
     // elements.map(e => console.log(`Element: ${JSON.stringify(e)}`));
-    progressWidth = elements[0].container.getElementsByClassName("line")[0].getBBox().width;
+
+    progressWidth = elements[0].container.getElementsByClassName("progress-background")[0].getBBox().height;
     // console.log(`ProgresWidth: ${progressWidth}`);
 }
 

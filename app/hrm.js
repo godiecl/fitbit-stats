@@ -62,24 +62,24 @@ function draw(rate) {
             theValue.style.fill = 'maroon';
             return;
         case 'calming':
-            theZone.style.fill = 'purple';
-            theValue.style.fill = 'purple';
+            theZone.style.fill = 'fb-slate-press';
+            theValue.style.fill = 'fb-slate-press';
             return;
         case 'resting':
-            theZone.style.fill = 'green';
-            theValue.style.fill = 'green';
+            theZone.style.fill = 'fb-green-press';
+            theValue.style.fill = 'fb-green-press';
             return;
         case 'regular':
-            theZone.style.fill = 'chartreuse';
-            theValue.style.fill = 'chartreuse';
+            theZone.style.fill = 'fb-yellow-press';
+            theValue.style.fill = 'fb-yellow-press';
             return;
         case 'high':
-            theZone.style.fill = 'yellow';
-            theValue.style.fill = 'yellow';
+            theZone.style.fill = 'fb-black';
+            theValue.style.fill = 'fb-black';
             return;
-        case 'fat burn':
-            theZone.style.fill = 'orange';
-            theValue.style.fill = 'orange';
+        case 'fat-burn':
+            theZone.style.fill = 'fb-plum';
+            theValue.style.fill = 'fb-plum';
             return;
         case 'cardio':
             theZone.style.fill = 'red';
@@ -145,7 +145,5 @@ export function onPresent() {
 export function onAbsent() {
     onScreenOff();
     theZone.text = 'No Data';
-    theZone.style.fill = 'fb-dark-gray';
     theValue.text = '---';
-    theValue.style.fill = 'fb-dark-gray';
 }
