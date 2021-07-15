@@ -1,50 +1,68 @@
 /* eslint-disable import/no-unresolved */
 import document from 'document';
 import clock from 'clock';
+import { vibration } from "haptics";
 
-const theClock = document.getElementById('clock');
-const theHour = document.getElementById('clock-hour');
-const theSeparator = document.getElementById('clock-separator');
-const theMinutes = document.getElementById('clock-minutes');
+const theTime = document.getElementById('clock-time');
 const theSeconds = document.getElementById('clock-seconds');
 const theSecondsHand = document.getElementById('clock-seconds-hand');
+const clockTouch = document.getElementById('clock-touch');
 
 // The timer to move the seconds hand
 let theMillisTimer = null;
+let firstTouch = false;
+let secondsHandOn = false;
 
 function zeroPad(i) {
-  if (i < 10) {
-    return `0${i}`;
-  }
-  return i;
+  return i < 10 ? `0${i}` : i;
 }
 
 function draw(evt) {
-  // Show the seconds hand
-  theSecondsHand.style.opacity = 1;
-  // Update the hour:minutes:seconds
+  // Update the seconds
   theSeconds.text = zeroPad(evt.date.getSeconds());
-  theMinutes.text = zeroPad(evt.date.getMinutes());
-  theHour.text = evt.date.getHours();
-  // : on/off
-  // eslint-disable-next-line no-bitwise
-  theSeparator.style.opacity ^= 1;
+  // Upda the time
+  theTime.text = `${evt.date.getHours()}:${zeroPad(evt.date.getMinutes())}`;
+}
+
+function turnOnSecondHand() {
+  secondsHandOn = true;
+  // Move the hand
+  theMillisTimer = setInterval(() => {
+    const date = new Date();
+    theSecondsHand.groupTransform.rotate.angle = 6 * date.getSeconds() + 0.006 * date.getMilliseconds();
+    theSecondsHand.style.opacity = 1;
+  }, 100);
+}
+
+function turnOffSecondHand() {
+  vibration.stop();
+  secondsHandOn = false;
+  firstTouch = false;
+  theSecondsHand.style.opacity = 0;
+  clearInterval(theMillisTimer);
+  theMillisTimer = null;
 }
 
 export function initialize() {
   clock.granularity = 'seconds';
-  theSeparator.style.display = 'inline'
+  clockTouch.addEventListener('mousedown', () => {
+    vibration.start("bump");
+    if (firstTouch) {
+      if (secondsHandOn) {
+        turnOffSecondHand();
+      } else {
+        turnOnSecondHand();
+      }
+    } else {
+      firstTouch = true;
+      setTimeout(() => { firstTouch = false }, 500);
+    }
+  });
 }
 
 export function onScreenOn() {
   // Start the draw of time
   clock.addEventListener('tick', draw);
-
-  // Move the hand
-  theMillisTimer = setInterval(() => {
-    const date = new Date();
-    theSecondsHand.groupTransform.rotate.angle = 6 * date.getSeconds() + 0.006 * date.getMilliseconds();
-  }, 100);
 }
 
 export function onScreenOff() {
@@ -55,11 +73,9 @@ export function onScreenOff() {
 }
 
 export function onPresent() {
-  theClock.style.fill = 'fb-white';
-  theSeconds.style.fill = 'fb-red';
+  theTime.style.fill = 'fb-white';
 }
 
 export function onAbsent() {
-  theClock.style.fill = 'fb-dark-gray';
-  theSeconds.style.fill = 'fb-dark-gray';
+  theTime.style.fill = 'fb-dark-gray';
 }

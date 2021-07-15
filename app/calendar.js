@@ -1,34 +1,28 @@
 /* eslint-disable import/no-unresolved */
 import document from 'document';
 
-const theDay = document.getElementById('calendar-day');
 const theDate = document.getElementById('calendar-date');
 
 const theMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-const theDays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
-const theColors = 'red_yellow_magenta_limegreen_orange_cyan_orchid'.split('_');
+const theDaysElements = [];
 
 function zeroPad(i) {
-    if (i < 10) {
-        return `0${i}`;
-    }
-    return i;
+    return i < 10 ? `0${i}` : i;
 }
 
 function draw() {
     const now = new Date();
 
-    // const monthIndex = now.getMonth() + 1;
-    // const year = now.getYear() % 100;
+    // eslint-disable-next-line no-return-assign
+    theDaysElements.map(e => e.style.fill = 'fb-light-gray');
+    theDaysElements[now.getDay()].style.fill = 'fb-black';
 
-    theDay.text = theDays[now.getDay()].toUpperCase();
-    theDay.style.fill = theColors[now.getDay()];
-
-    theDate.text = `${theMonths[now.getMonth()].toUpperCase()} ${zeroPad(now.getDate())}`;
-    theDate.style.fill = theColors[now.getDay()];
+    theDate.text = `${theMonths[now.getMonth()]} ${zeroPad(now.getDate())}`;
 }
 
 export function initialize() {
+    const days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    days.map(d => theDaysElements.push(document.getElementById(`days-${d}`)));
 }
 
 export function onScreenOn() {
@@ -40,9 +34,9 @@ export function onScreenOff() {
 
 export function onPresent() {
     draw();
+    theDate.style.fill = 'fb-white';
 }
 
 export function onAbsent() {
-    theDay.style.fill = 'fb-dark-gray';
     theDate.style.fill = 'fb-dark-gray';
 }

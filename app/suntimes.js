@@ -9,10 +9,7 @@ const theSunSet = document.getElementById('suntimes-sunset');
 let lastWeekDay = null;
 
 function zeroPad(i) {
-    if (i < 10) {
-        return `0${i}`;
-    }
-    return i;
+    return i < 10 ? `0${i}` : i;
 }
 
 function refresh() {
@@ -44,11 +41,7 @@ export function onScreenOff() {
 }
 
 export function onPresent() {
-    theSunRise.style.fill = 'fb-white';
-    theSunSet.style.fill = 'fb-white';
 }
 
 export function onAbsent() {
-    theSunRise.style.fill = 'fb-dark-gray';
-    theSunSet.style.fill = 'fb-dark-gray';
 }

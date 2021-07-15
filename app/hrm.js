@@ -6,7 +6,6 @@ import { user } from 'user-profile';
 const theZone = document.getElementById('hr-zone');
 const theValue = document.getElementById('hr-value');
 const theDiastole = document.getElementById('hr-diastole');
-// const theSystole = document.getElementById('hr-systole');
 
 let lastTimestamp = null;
 let lastRate = null;
@@ -36,19 +35,11 @@ function getZone(rate, zone) {
 function beating() {
     // eslint-disable-next-line no-bitwise
     theDiastole.style.opacity ^= 1;
-    /*
-    if (theDiastole.style.opacity === SHOW) {
-        theDiastole.style.opacity = HIDE;
-    } else {
-        theDiastole.style.opacity = SHOW;
-    }
-    */
 }
 
 function draw(rate) {
     // Clear the rate animation
     if (theBeatingTimer !== null) {
-        // console.log("Clear animation inside draw!");
         clearInterval(theBeatingTimer);
         theBeatingTimer = null;
         theDiastole.style.opacity = 0;
@@ -56,14 +47,13 @@ function draw(rate) {
 
     // Hearbeat animation
     const millis = 30000 / rate;
-    // console.log("Starting animation with " + millis + "ms.");
     theBeatingTimer = setInterval(beating, millis);
 
     theValue.text = rate;
 
     let zone = user.heartRateZone(rate);
     zone = getZone(rate, zone);
-    theZone.text = zone.toUpperCase();// hr_zone.charAt(0).toUpperCase() + hr_zone.slice(1);
+    theZone.text = zone.charAt(0).toUpperCase() + zone.slice(1); // .toUpperCase();// hr_zone.charAt(0).toUpperCase() + hr_zone.slice(1);
 
     // eslint-disable-next-line default-case
     switch (zone) {
@@ -87,7 +77,7 @@ function draw(rate) {
             theZone.style.fill = 'yellow';
             theValue.style.fill = 'yellow';
             return;
-        case 'fat-burn':
+        case 'fat burn':
             theZone.style.fill = 'orange';
             theValue.style.fill = 'orange';
             return;
@@ -102,47 +92,32 @@ function draw(rate) {
 }
 
 function setReading(rate, timestamp) {
-    // console.log(`Data: ${timestamp}/${lastTimestamp} - ${rate}/${lastRate}.`);
+    // Same timestamp
     if (timestamp === lastTimestamp) {
-        // Same timestamp
-        // console.log('no redraw: same last timestamp');
         return;
     }
     lastTimestamp = timestamp;
 
+    // Same rate
     if (rate === lastRate) {
-        // Same rate
-        // console.log('no redraw: same last rate');
         return;
     }
     lastRate = rate;
 
-    // console.log(`Redraw with ${lastRate}.`);
     draw(lastRate);
 }
 
 export function initialize() {
     theHRS = new HeartRateSensor();
 
-    /*
-    theHRS.addEventListener('activate', () => {
-        console.log('onActivate HRM!');
-    });
-    */
-
     theHRS.addEventListener('reading', () => {
-        // console.log('HRM: ' + theHRS.heartRate);
         setReading(theHRS.heartRate, theHRS.timestamp);
     });
-
-    // console.log('HRM Last: ' + theHRS.timestamp);
 }
 
 export function onScreenOn() {
     if (!theReadingTimer) {
         theHRS.start();
-        // getReading();
-        // theReadingTimer = setInterval(getReading, 500);
     }
 }
 
@@ -161,17 +136,15 @@ export function onScreenOff() {
     }
     theZone.text = '';
     theValue.text = '';
-    // draw(0);
 }
 
 export function onPresent() {
-    // console.log(`onPresent: HRS activated: ${theHRS.activated}.`);
     onScreenOn();
 }
 
 export function onAbsent() {
     onScreenOff();
-    theZone.text = 'NO DATA';
+    theZone.text = 'No Data';
     theZone.style.fill = 'fb-dark-gray';
     theValue.text = '---';
     theValue.style.fill = 'fb-dark-gray';

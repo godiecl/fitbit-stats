@@ -1,13 +1,22 @@
-<svg>
-  <!-- image href="background.jpg" load="sync" opacity="0.3" / -->
+<svg id="root">
+
   <rect id="background" />
 
-  <g id="calendar">
-    <text id="calendar-day"  text-buffer="WEDNESDAY" />
-    <text id="calendar-date" text-buffer="DECEMBER 16" />
+  <g id="calendar" transform="translate(100,160)">
+    <text id="calendar-date">September 18</text>
   </g>
 
-  <g id="steps" transform="translate(0,80)">
+  <g id="days" font-size="26" transform="translate(0,13%)">
+    <text id="days-mon">MON</text>
+    <text id="days-tue">TUE</text>
+    <text id="days-wed">WED</text>
+    <text id="days-thu">THU</text>
+    <text id="days-fri">FRI</text>
+    <text id="days-sat">SAT</text>
+    <text id="days-sun">SUN</text>
+  </g>
+
+  <g id="steps" transform="translate(0,80)" opacity="0">
     <rect class="line"/>
     <circle class="tgt-no"/>
     <circle class="tgt-yes"/>
@@ -17,7 +26,7 @@
     <text class="icon">🚶</text>
   </g>
 
-  <g id="distance" transform="translate(0,112)">
+  <g id="distance" transform="translate(0,112)" opacity="0">
     <rect class="line"/>
     <circle class="tgt-no"/>
     <circle class="tgt-yes"/>
@@ -27,7 +36,7 @@
     <text class="icon">📏</text>
   </g>
 
-  <g id="calories" transform="translate(0,144)">
+  <g id="calories" transform="translate(0,144)" opacity="0">
     <rect class="line"/>
     <circle class="tgt-no"/>
     <circle class="tgt-yes"/>
@@ -37,7 +46,7 @@
     <text class="icon">🔥</text>
   </g>
 
-  <g id="elevationGain" transform="translate(0,176)">
+  <g id="elevationGain" transform="translate(0,176)" opacity="0">
     <rect class="line"/>
     <circle class="tgt-no"/>
     <circle class="tgt-yes"/>
@@ -47,7 +56,7 @@
     <text class="icon">🏗️</text>
   </g>
 
-  <g id="activeZoneMinutes" transform="translate(0,208)">
+  <g id="activeZoneMinutes" transform="translate(0,208)" opacity="0">
     <rect class="line"/>
     <circle class="tgt-no"/>
     <circle class="tgt-yes"/>
@@ -58,83 +67,89 @@
   </g>
 
   <g id="battery">
-    <g transform="translate(-227,0)">
+    <g transform="translate(-24%,31%)">
       <text class="value" id="battery-percent">100</text>
       <text class="value-icon" id="battery-icon">🔋</text>
       <text class="value-icon" id="battery-icon-charge">⚡</text>
     </g>
-    <line x1="0" y1="262" x2="336" y2="262" fill="fb-dark-gray" stroke-width="1" />
-    <line id="battery-bar" x1="0" y1="262" x2="336" y2="262" fill="fb-gray" stroke-width="1" />
+    <!-- line id="battery-bar" x1="0" y1="262" x2="336" y2="262" fill="fb-gray" stroke-width="1" / -->
   </g>
 
-  <!-- line x1="63" y1="336" x2="63" y2="260" fill="fb-gray" stroke-width="1" / -->
-  <!-- line x1="162" y1="260" x2="162" y2="336" fill="fb-gray" stroke-width="1" / -->
+  <line x1="0" y1="276" x2="336" y2="276" fill="fb-extra-dark-gray" stroke-width="1" />
+  <line x1="0" y1="302" x2="336" y2="302" fill="fb-extra-dark-gray" stroke-width="1" />
 
-  <g id="clock">
-    <text id="clock-hour"      text-anchor="end"   text-length="2" text-buffer="00"/>
-    <text id="clock-separator" text-anchor="start" text-length="1" text-buffer=":" />
-    <text id="clock-minutes"   text-anchor="start" text-length="2" text-buffer="00"/>
-    <text id="clock-seconds"   text-anchor="start" text-length="2" text-buffer="00"/>
+  <g id="clock" transform="translate(0,31%)">
+    <text id="clock-time">00:00</text>
+    <text id="clock-seconds">00</text>
   </g>
 
-  <g transform="translate(50%,50%)">
-    <g id="clock-seconds-hand" pointer-events="visible">
-      <line id="clock-seconds-hand" x1="0" y1="8%" x2="0" y2="-49%" stroke-width="2" fill="fb-red" />
-    </g>
-    <circle id="outercenterdot" cx="0" cy="0" r="6" fill="fb-red" />
-    <circle id="innercenterdot" cx="0" cy="0" r="3" fill="fb-black" />
+  <g id="hr" transform="translate(-90,156)">
+    <text class="value-right" id="hr-zone">out-of-range</text>
+    <text class="value" id="hr-value">---</text>
+    <text class="value-icon" id="hr-systole">🖤</text>
+    <text class="value-icon" id="hr-diastole">❤️</text>
   </g>
 
-  <g id="hr">
-    <text id="hr-zone" text-buffer="-----"/>
-    <text id="hr-value" text-buffer="---" />
-    <text id="hr-systole" text-buffer="❤️" />
-    <text id="hr-diastole" text-buffer="❤️" />
+  <g id="city">
+    <rect x="0" y="153" width="100%" height="2" fill="fb-dark-gray" />
+    <rect x="0" y="155" width="100%" height="1" fill="fb-gray" />
+    <rect x="0" y="156" width="100%" height="28" fill="fb-light-gray" />
+    <rect x="0" y="183" width="100%" height="1" fill="fb-gray" />
+    <rect x="0" y="184" width="100%" height="2" fill="fb-dark-gray" />
+    <text x="2%" y="53%" fill="black" class="value-right">Antofagasta</text>
   </g>
 
   <g id="sunrise">
-    <g transform="translate(-12,-216)">
-      <text class="value" id="suntimes-sunrise">--:--</text>
+    <g transform="translate(28%,3%)">
+      <text fill="black" class="value" id="suntimes-sunrise">--:--</text>
       <text class="value-icon">☀️</text>
     </g>
-    <g transform="translate(-8,-196)" opacity="1">
-      <text class="value" id="suntimes-sunset">--:--</text>
+    <g transform="translate(44%,3%)">
+      <text fill="black" class="value" id="suntimes-sunset">--:--</text>
       <text class="value-icon">🌙</text>
     </g>
   </g>
 
   <g id="barometer">
-    <g transform="translate(-236,-216)">
+    <g transform="translate(-120,130)">
       <text class="value" id="barometer-altitude">4800.1</text>
       <text class="value-icon">⛰️</text>
     </g>
-    <g transform="translate(-240,-196)">
+    <g transform="translate(-56,130)">
       <text class="value" id="barometer-pressure">1234.5</text>
       <text class="value-icon">🌀</text>
     </g>
   </g>
 
   <g id="user">
-    <g transform="translate(-167,0)">
+    <g transform="translate(-6,130)">
       <text class="value" id="user-bmr">2800.8</text>
       <text class="value-icon">✨</text>
     </g>
-    <g transform="translate(-106,0)">
-      <text class="value" id="user-bmi">2800.8</text>
+    <g transform="translate(44,130)">
+      <text class="value" id="user-bmi">35.2</text>
       <text class="value-icon">⚖️</text>
     </g>
-    <g transform="translate(-42,0)">
-      <text class="value" id="user-weight">2800.8</text>
+    <g transform="translate(96,130)">
+      <text class="value" id="user-weight">110.0</text>
       <text class="value-icon">⏲️</text>
     </g>
-    <g transform="translate(8,0)">
-      <text class="value" id="user-rhr">2800.8</text>
+    <g transform="translate(135,130)">
+      <text class="value" id="user-rhr">60.8</text>
       <text class="value-icon">❤️</text>
     </g>
   </g>
 
-  <text text-buffer="🐱" x="44" y="316" font-size="26" />
+  <rect id="torch"/>
 
-  <rect id="torch" pointer-events="visible" />
+  <text id="torch-touch" x="10%" y="80%" class="value-icon" pointer-events="visible" opacity="0.2">💡</text>
+  <text id="clock-touch" x="95%" y="80%" class="value-icon" pointer-events="visible" opacity="0.2">⌚</text>
+
+  <g transform="translate(50%,50%)">
+    <g id="clock-seconds-hand" opacity="0">
+      <line id="clock-seconds-hand" x1="0" y1="8%" x2="0" y2="-49%" stroke-width="2" fill="fb-yellow" />
+      <text x="-13" y="6" font-size="26">🐱</text>
+    </g>
+  </g>
 
 </svg>

@@ -4,6 +4,7 @@ import { display } from 'display';
 import { vibration } from "haptics";
 
 const torch = document.getElementById('torch');
+const torchTouch = document.getElementById('torch-touch');
 
 let firstTouch = false;
 let torchOn = false;
@@ -30,7 +31,7 @@ function turnOnTorch() {
 }
 
 export function initialize() {
-  torch.addEventListener('mousedown', () => {
+  torchTouch.addEventListener('mousedown', () => {
     vibration.start("bump");
     if (firstTouch) {
       if (torchOn) {

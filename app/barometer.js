@@ -31,11 +31,7 @@ export function onScreenOff() {
 }
 
 export function onPresent() {
-    thePressure.style.fill = 'fb-white';
-    theAltitude.style.fill = 'fb-white';
 }
 
 export function onAbsent() {
-    thePressure.style.fill = 'fb-dark-gray';
-    theAltitude.style.fill = 'fb-dark-gray';
 }

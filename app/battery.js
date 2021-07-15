@@ -5,7 +5,6 @@ import { battery, charger } from 'power';
 const theValue = document.getElementById('battery-percent');
 const theIcon = document.getElementById('battery-icon');
 const theIconCharge = document.getElementById('battery-icon-charge');
-const theBar = document.getElementById('battery-bar');
 
 /**
  * Color code the battery level.
@@ -31,8 +30,6 @@ function getColor(level) {
 function refresh() {
     // The value
     theValue.text = battery.chargeLevel;
-    // The line
-    theBar.x2 = Math.floor((battery.chargeLevel * 336) / 100);
 
     // The color
     const color = `fb-${getColor(battery.chargeLevel)}`;
@@ -64,11 +61,7 @@ export function onScreenOff() {
 }
 
 export function onPresent() {
-    theValue.style.fill = 'fb-white';
-    refresh();
 }
 
 export function onAbsent() {
-    theValue.style.fill = 'fb-dark-gray';
-    refresh();
 }
