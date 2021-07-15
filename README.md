@@ -2,6 +2,12 @@
 
 Stats clock face for [Fitbit Sense](https://www.fitbit.com/global/us/products/smartwatches/sense). Bought from [Fitbit Sense | Ebest](https://www.ebest.cl/fitbit-sense.html).
 
+New version:
+
+![face](docs/20210715195359.png)
+
+Old version:
+
 ![face](docs/202107140924.png)
 
 ## Features
