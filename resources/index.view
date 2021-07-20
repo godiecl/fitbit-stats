@@ -52,7 +52,7 @@
   </g>
 
   <!-- line x1="22" y1="192" x2="314" y2="192" fill="fb-black" stroke-width="1" / -->
-  <line x1="22" y1="272" x2="314" y2="272" fill="fb-black" stroke-width="1" />
+  <!-- line x1="22" y1="272" x2="314" y2="272" fill="fb-black" stroke-width="1" / -->
 
   <g id="calendar" transform="translate(100,56)">
     <text id="calendar-number">18</text>
