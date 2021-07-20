@@ -16,12 +16,13 @@ const elements = [];
 
 let progressWidth = null;
 
-function getElement(prefix) {
-    const element = document.getElementById(prefix);
+function getElement(type) {
+    const element = document.getElementById(type);
     return {
-        prefix,
+        type,
         prevValue: null,
         container: element,
+        background: element.getElementsByClassName("progress-background")[0],
         bar: element.getElementsByClassName("progress-bar")[0],
         value: element.getElementsByClassName("progress-value")[0],
         goal: element.getElementsByClassName("progress-goal")[0],
@@ -31,15 +32,14 @@ function getElement(prefix) {
 
 function draw(el) {
     // The measure
-    let actual = (today.adjusted[el.prefix] || 0);
-    let goal = (goals[el.prefix] || 0);
+    let actual = (today.adjusted[el.type] || 0);
+    let goal = (goals[el.type] || 0);
 
     // Fix the zone minutes
-    if (el.prefix === "activeZoneMinutes") {
+    if (el.type === "activeZoneMinutes") {
         actual = today.adjusted.activeZoneMinutes.total;
         goal = (goal.total || 0);
     }
-    // console.log(`Value: ${el.prefix} -> ${actual}/${goal}.`);
 
     // The same.. return!
     if (el.prevValue === actual) {
@@ -57,28 +57,38 @@ function draw(el) {
         progress = 100. * actual / goal;
     }
 
-    // Show the spot
-    if (progress >= 100) {
-        progress = 100;
-        el.goal.style.fill = 'fb-gray';
-    } else {
-        el.goal.style.fill = 'fb-extra-dark-gray';
+    const times = Math.floor(progress / 100);
+    progress %= 100;
+    // console.log(`Progress: ${el.type} -> ${progress} -> ${times}.`);
+
+    switch (times) {
+        case 1:
+            el.background.style.fill = 'fb-black';
+            el.bar.style.fill = 'fb-green-press';
+            el.goal.style.fill = 'fb-light-gray';
+            break;
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            el.background.style.fill = 'fb-green-press';
+            el.bar.style.fill = 'maroon';
+            el.goal.style.fill = 'fb-light-gray';
+            break;
+        default:
+            el.background.style.fill = 'darkseagreen';
+            el.bar.style.fill = 'fb-black';
+            el.goal.style.fill = 'fb-dark-gray';
     }
-    // console.log(`Progress: ${progress}.`);
 
     // Show the width
     const height = Math.floor(progressWidth * progress / 100);
-    // console.log(`Height: ${height}`);
     el.bar.y1 = 172 - height;
 }
 
 export function initialize() {
-    // goalTypes.map(type => console.log(`Type: ${type}`));
     goalTypes.map(type => elements.push(getElement(type)));
-    // elements.map(e => console.log(`Element: ${JSON.stringify(e)}`));
-
-    progressWidth = elements[0].container.getElementsByClassName("progress-background")[0].getBBox().height;
-    // console.log(`ProgresWidth: ${progressWidth}`);
+    progressWidth = elements[0].background.getBBox().height;
 }
 
 export function onScreenOn() {
