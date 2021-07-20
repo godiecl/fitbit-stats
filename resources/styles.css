@@ -84,7 +84,7 @@
   x: "50%";
   y: 190;
   text-anchor: middle;
-  font-size: 20;
+  font-size: 22;
 }
 
 .progress-goal {
@@ -119,7 +119,7 @@
 .value {
   x: "50%";
   y: "50%";
-  font-size: 24;
+  font-size: 28;
   text-anchor: end;
   fill: "fb-black";
 }
