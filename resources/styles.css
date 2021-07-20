@@ -48,7 +48,7 @@
 #clock-seconds {
   x: "50%+74";
   y: "50%";
-  font-size: 44;
+  font-size: 48;
 }
 
 /* Activities ******************************** */
@@ -82,7 +82,7 @@
 
 .progress-value {
   x: "50%";
-  y: 190;
+  y: 192;
   text-anchor: middle;
   font-size: 22;
 }
