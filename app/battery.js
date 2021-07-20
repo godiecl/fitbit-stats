@@ -13,9 +13,12 @@ const theIconCharge = document.getElementById('battery-icon-charge');
  */
 function getColor(level) {
     if (level <= 20) {
-        return 'magenta';
+        return 'plum';
     }
-    return 'black';
+    if (level <= 80) {
+        return 'black';
+    }
+    return 'green-press'
 }
 
 function refresh() {
