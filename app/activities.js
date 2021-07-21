@@ -65,7 +65,7 @@ function draw(el) {
         case 1:
             el.background.style.fill = 'fb-black';
             el.bar.style.fill = 'fb-green-press';
-            el.goal.style.fill = 'fb-light-gray';
+            el.goal.style.fill = 'fb-white';
             break;
         case 2:
         case 3:
@@ -73,12 +73,12 @@ function draw(el) {
         case 5:
             el.background.style.fill = 'fb-green-press';
             el.bar.style.fill = 'maroon';
-            el.goal.style.fill = 'fb-light-gray';
+            el.goal.style.fill = 'fb-white';
             break;
         default:
             el.background.style.fill = 'darkseagreen';
             el.bar.style.fill = 'fb-black';
-            el.goal.style.fill = 'fb-dark-gray';
+            el.goal.style.fill = 'fb-extra-dark-gray';
     }
 
     // Show the width
