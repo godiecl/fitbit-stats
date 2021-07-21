@@ -3,6 +3,14 @@
   fill: "fb-green-press";
 }
 
+#background {
+  x: 0;
+  y: 0;
+  width: 100%;
+  height: 100%;
+  fill: "white";
+}
+
 #torch {
   x: 0;
   y: 0;

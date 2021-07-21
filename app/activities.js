@@ -76,7 +76,7 @@ function draw(el) {
             el.goal.style.fill = 'fb-white';
             break;
         default:
-            el.background.style.fill = 'darkseagreen';
+            el.background.style.fill = '#F0F0F0';
             el.bar.style.fill = 'fb-black';
             el.goal.style.fill = 'fb-extra-dark-gray';
     }

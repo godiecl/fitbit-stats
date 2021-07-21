@@ -1,5 +1,7 @@
 <svg id="root">
 
+  <rect id="background" />
+
   <image x="0" y="0" width="336" height="336" href="casio.png" />
 
   <g id="steps" transform="translate(-110,0)">
