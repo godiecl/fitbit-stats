@@ -11,10 +11,10 @@ export function initialize() {
 }
 
 export function onScreenOn() {
-    theBmr.text = 1973; // user.bmr;
-    theBmi.text = 35.2; // (user.weight / (user.height * user.height)).toFixed(1);
-    theWeight.text = 109.1; // user.weight;
-    theResting.text = 69; // user.restingHeartRate;
+    theBmr.text = user.bmr;
+    theBmi.text = (user.weight / (user.height * user.height)).toFixed(1);
+    theWeight.text = user.weight;
+    theResting.text = user.restingHeartRate;
 }
 
 export function onScreenOff() {
