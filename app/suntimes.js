@@ -21,16 +21,16 @@ function refresh() {
 
     // Refresh the sunrise
     const sunrise = getSunrise(-23.65236, -70.3954);
-    theSunRise.text = `${sunrise.getHours()}:${zeroPad(sunrise.getMinutes())}`;
+    theSunRise.text = `${sunrise.getHours()}.${zeroPad(sunrise.getMinutes())}`;
 
     // Refresh the sunrise
     const sunset = getSunset(-23.65236, -70.3954);
-    theSunSet.text = `${sunset.getHours()}:${zeroPad(sunset.getMinutes())}`;
+    theSunSet.text = `${sunset.getHours()}.${zeroPad(sunset.getMinutes())}`;
 }
 
 export function initialize() {
-    theSunRise.text = '--:--';
-    theSunSet.text = '--:--';
+    theSunRise.text = '--.--';
+    theSunSet.text = '--.--';
 }
 
 export function onScreenOn() {
