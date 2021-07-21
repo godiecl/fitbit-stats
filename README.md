@@ -4,9 +4,11 @@ Stats clock face for [Fitbit Sense](https://www.fitbit.com/global/us/products/sm
 
 New version:
 
-![face](docs/20210715195359.png)
+![face](docs/20210721170743.png)
 
 Old version:
+
+![face](docs/20210715195359.png)
 
 ![face](docs/202107140924.png)
 
