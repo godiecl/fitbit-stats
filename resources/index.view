@@ -115,11 +115,11 @@
   <rect id="torch"/>
 
   <text id="clock-touch" x="55" y="220" class="value-icon" pointer-events="visible">⌚</text>
-  <text id="torch-touch" x="55" y="260" class="value-icon" pointer-events="visible">💡</text>
+  <text id="torch-touch" x="300" y="262" class="value-icon" pointer-events="visible" font-size="34" opacity="0.2">💡</text>
 
   <g transform="translate(50%,50%)">
     <g id="clock-seconds-hand" opacity="0">
-      <line id="clock-seconds-hand" x1="0" y1="8%" x2="0" y2="-49%" stroke-width="2" fill="fb-yellow" />
+      <line id="clock-seconds-hand" x1="0" y1="8%" x2="0" y2="-49%" stroke-width="2" fill="red" />
     </g>
   </g>
 
