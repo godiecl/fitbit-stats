@@ -60,7 +60,8 @@
   </g>
 
   <g id="clock" transform="translate(-20,100)">
-    <text id="clock-time">00:00</text>
+    <text id="clock-hour">00</text>
+    <text id="clock-minutes">.00</text>
     <text id="clock-seconds">00</text>
   </g>
 
@@ -73,11 +74,11 @@
 
   <g id="sunrise">
     <g transform="translate(116,-105)">
-      <text fill="black" class="value" id="suntimes-sunrise">--:--</text>
+      <text class="value" id="suntimes-sunrise">--.--</text>
       <text class="value-icon">☀️</text>
     </g>
     <g transform="translate(116,-78)">
-      <text fill="black" class="value" id="suntimes-sunset">--:--</text>
+      <text class="value" id="suntimes-sunset">--.--</text>
       <text class="value-icon">🌙</text>
     </g>
   </g>
@@ -94,19 +95,19 @@
   </g>
 
   <g id="user">
-    <g transform="translate(-6,130)" opacity="0">
+    <g transform="translate(-4,127)" opacity="0">
       <text class="value" id="user-bmr">2800.8</text>
       <text class="value-icon">✨</text>
     </g>
-    <g transform="translate(12,127)">
+    <g transform="translate(10,127)">
       <text class="value" id="user-bmi">35.2</text>
       <text class="value-icon">⚖️</text>
     </g>
-    <g transform="translate(72,127)">
+    <g transform="translate(70,127)">
       <text class="value" id="user-weight">110.0</text>
       <text class="value-icon">⏲️</text>
     </g>
-    <g transform="translate(118,127)">
+    <g transform="translate(116,127)">
       <text class="value" id="user-rhr">60.8</text>
       <text class="value-icon">❤️</text>
     </g>

@@ -1,6 +1,6 @@
 #root {
   font-family: "Tungsten-Medium";
-  fill: "fb-blue";
+  fill: "fb-green-press";
 }
 
 #torch {
@@ -13,10 +13,6 @@
 }
 
 /* Calendar ********************************** */
-
-#calendar {
-  fill: "fb-black";
-}
 
 #calendar-number {
   x: "50%+30";
@@ -34,21 +30,25 @@
 
 /* Clock ************************************* */
 
-#clock {
+#clock-hour {
+  x: "50%-18";
+  y: "50%";
+  font-size: 100;
+  text-anchor: end;
   fill: "fb-black";
 }
 
-#clock-time {
-  x: "50%";
+#clock-minutes {
+  x: "50%-16";
   y: "50%";
   font-size: 100;
-  text-anchor: middle;
+  fill: "fb-extra-dark-gray";
 }
 
 #clock-seconds {
-  x: "50%+74";
+  x: "50%+76";
   y: "50%";
-  font-size: 48;
+  font-size: 52;
 }
 
 /* Activities ******************************** */
@@ -74,9 +74,9 @@
 }
 
 .progress-icon {
-  x: "50%";
+  x: "50%+2";
   y: 168;
-  font-size: 20;
+  font-size: 24;
   text-anchor: middle;
 }
 
@@ -94,26 +94,6 @@
   font-size: 16;
 }
 
-#steps {
-  fill: "fb-yellow-press";
-}
-
-#distance {
-  fill: "fb-slate-press";
-}
-
-#calories {
-  fill: "fb-green-press";
-}
-
-#elevationGain {
-  fill: maroon;
-}
-
-#activeZoneMinutes {
-  fill: green;
-}
-
 /* Profile *********************************** */
 
 .value {
@@ -121,20 +101,18 @@
   y: "50%";
   font-size: 28;
   text-anchor: end;
-  fill: "fb-black";
 }
 
 .value-icon {
-  x: "50%+21";
+  x: "50%+24";
   y: "50%-3";
-  font-size: 18;
+  font-size: 20;
   text-anchor: end;
 }
 
 .value-right {
-  x: "50%+22";
+  x: "50%+24";
   y: "50%";
   font-size: 24;
   text-anchor: start;
-  fill: "fb-black";
 }

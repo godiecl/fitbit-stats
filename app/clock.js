@@ -3,7 +3,8 @@ import document from 'document';
 import clock from 'clock';
 import { vibration } from "haptics";
 
-const theTime = document.getElementById('clock-time');
+const theHour = document.getElementById('clock-hour');
+const theMinutes = document.getElementById('clock-minutes');
 const theSeconds = document.getElementById('clock-seconds');
 const theSecondsHand = document.getElementById('clock-seconds-hand');
 const clockTouch = document.getElementById('clock-touch');
@@ -18,10 +19,11 @@ function zeroPad(i) {
 }
 
 function draw(evt) {
+  // Update the hour an minutes
+  theHour.text = evt.date.getHours();
+  theMinutes.text = `.${zeroPad(evt.date.getMinutes())}`;
   // Update the seconds
   theSeconds.text = zeroPad(evt.date.getSeconds());
-  // Upda the time
-  theTime.text = `${evt.date.getHours()}:${zeroPad(evt.date.getMinutes())}`;
 }
 
 function turnOnSecondHand() {
