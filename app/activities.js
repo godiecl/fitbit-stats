@@ -12,6 +12,11 @@ const goalTypes = [
     "activeZoneMinutes"
 ];
 
+const bg1 = '#202020';
+const bg2 = 'fb-blue';
+const bg3 = 'fb-yellow';
+const bg4 = 'maroon';
+
 const elements = [];
 
 let progressWidth = null;
@@ -63,22 +68,19 @@ function draw(el) {
 
     switch (times) {
         case 1:
-            el.background.style.fill = 'fb-black';
-            el.bar.style.fill = 'fb-green-press';
-            el.goal.style.fill = 'fb-white';
+            el.background.style.fill = bg2;
+            el.bar.style.fill = bg3;
             break;
         case 2:
         case 3:
         case 4:
         case 5:
-            el.background.style.fill = 'fb-green-press';
-            el.bar.style.fill = 'maroon';
-            el.goal.style.fill = 'fb-white';
+            el.background.style.fill = bg3;
+            el.bar.style.fill = bg4;
             break;
         default:
-            el.background.style.fill = '#F0F0F0';
-            el.bar.style.fill = 'fb-black';
-            el.goal.style.fill = 'fb-extra-dark-gray';
+            el.background.style.fill = bg1;
+            el.bar.style.fill = bg2;
     }
 
     // Show the width

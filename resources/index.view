@@ -4,7 +4,7 @@
 
   <image x="0" y="0" width="336" height="336" href="casio.png" />
 
-  <g id="steps" transform="translate(-110,0)">
+  <g id="steps" transform="translate(-118,0)">
     <line class="progress-background"/>
     <line class="progress-bar"/>
     <text class="progress-icon">🚶</text>
@@ -12,7 +12,7 @@
     <text class="progress-goal">10000</text>
   </g>
 
-  <g id="distance" transform="translate(-70,0)">
+  <g id="distance" transform="translate(-76,0)">
     <line class="progress-background"/>
     <line class="progress-bar"/>
     <text class="progress-icon">📏</text>
@@ -20,7 +20,7 @@
     <text class="progress-goal">90000</text>
   </g>
 
-  <g id="calories" transform="translate(-30,0)">
+  <g id="calories" transform="translate(-34,0)">
     <line class="progress-background"/>
     <line class="progress-bar"/>
     <text class="progress-icon">🔥</text>
@@ -28,7 +28,7 @@
     <text class="progress-goal">3500</text>
   </g>
 
-  <g id="elevationGain" transform="translate(10,0)">
+  <g id="elevationGain" transform="translate(8,0)">
     <line class="progress-background"/>
     <line class="progress-bar"/>
     <text class="progress-icon">🏗️</text>
@@ -44,30 +44,18 @@
     <text class="progress-goal">900</text>
   </g>
 
-  <g id="battery">
-    <g transform="translate(116,-51)">
-      <text class="value" id="battery-percent">100%</text>
-      <text class="value-icon" id="battery-icon">🔋</text>
-      <text class="value-icon" id="battery-icon-charge">⚡</text>
-    </g>
-    <!-- line id="battery-bar" x1="0" y1="262" x2="336" y2="262" fill="fb-gray" stroke-width="1" / -->
-  </g>
-
-  <!-- line x1="22" y1="192" x2="314" y2="192" fill="fb-black" stroke-width="1" / -->
-  <!-- line x1="22" y1="272" x2="314" y2="272" fill="fb-black" stroke-width="1" / -->
-
   <g id="calendar" transform="translate(100,56)">
     <text id="calendar-number">18</text>
     <text id="calendar-day">MON</text>
   </g>
 
-  <g id="clock" transform="translate(-20,100)">
+  <g id="clock" transform="translate(-20,104)">
     <text id="clock-hour">00</text>
     <text id="clock-minutes">.00</text>
     <text id="clock-seconds">00</text>
   </g>
 
-  <g id="hr" transform="translate(-110,126)">
+  <g id="hr" transform="translate(-112,130)">
     <text class="value-right" id="hr-zone">out-of-range</text>
     <text class="value" id="hr-value">---</text>
     <text class="value-icon" id="hr-systole">🖤</text>
@@ -75,41 +63,49 @@
   </g>
 
   <g id="sunrise">
-    <g transform="translate(116,-105)">
+    <g transform="translate(116,-110)">
       <text class="value" id="suntimes-sunrise">--.--</text>
       <text class="value-icon">☀️</text>
     </g>
-    <g transform="translate(116,-78)">
+    <g transform="translate(116,-83)">
       <text class="value" id="suntimes-sunset">--.--</text>
       <text class="value-icon">🌙</text>
     </g>
   </g>
 
   <g id="barometer">
-    <g transform="translate(116,-24)">
+    <g transform="translate(116,-54)">
       <text class="value" id="barometer-altitude">4800.1</text>
       <text class="value-icon">⛰️</text>
     </g>
-    <g transform="translate(116,3)">
+    <g transform="translate(116,-26)">
       <text class="value" id="barometer-pressure">1234.5</text>
       <text class="value-icon">🌀</text>
     </g>
   </g>
 
+  <g id="battery">
+    <g transform="translate(116,3)">
+      <text class="value" id="battery-percent">100%</text>
+      <text class="value-icon" id="battery-icon">🔋</text>
+      <text class="value-icon" id="battery-icon-charge">⚡</text>
+    </g>
+  </g>
+
   <g id="user">
-    <g transform="translate(-4,127)" opacity="0">
+    <g transform="translate(-4,130)" opacity="0">
       <text class="value" id="user-bmr">2800.8</text>
       <text class="value-icon">✨</text>
     </g>
-    <g transform="translate(10,127)">
+    <g transform="translate(2,130)">
       <text class="value" id="user-bmi">35.2</text>
       <text class="value-icon">⚖️</text>
     </g>
-    <g transform="translate(70,127)">
+    <g transform="translate(66,130)">
       <text class="value" id="user-weight">110.0</text>
       <text class="value-icon">⏲️</text>
     </g>
-    <g transform="translate(116,127)">
+    <g transform="translate(114,130)">
       <text class="value" id="user-rhr">60.8</text>
       <text class="value-icon">❤️</text>
     </g>

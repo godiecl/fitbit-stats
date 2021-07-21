@@ -62,24 +62,24 @@ function draw(rate) {
             theValue.style.fill = 'maroon';
             return;
         case 'calming':
-            theZone.style.fill = 'fb-slate-press';
-            theValue.style.fill = 'fb-slate-press';
+            theZone.style.fill = 'purple';
+            theValue.style.fill = 'purple';
             return;
         case 'resting':
-            theZone.style.fill = 'fb-green-press';
-            theValue.style.fill = 'fb-green-press';
+            theZone.style.fill = 'green';
+            theValue.style.fill = 'green';
             return;
         case 'regular':
-            theZone.style.fill = 'fb-yellow-press';
-            theValue.style.fill = 'fb-yellow-press';
+            theZone.style.fill = 'chartreuse';
+            theValue.style.fill = 'chartreuse';
             return;
         case 'high':
-            theZone.style.fill = 'fb-black';
-            theValue.style.fill = 'fb-black';
+            theZone.style.fill = 'yellow';
+            theValue.style.fill = 'yellow';
             return;
         case 'fat-burn':
-            theZone.style.fill = 'fb-plum';
-            theValue.style.fill = 'fb-plum';
+            theZone.style.fill = 'orange';
+            theValue.style.fill = 'orange';
             return;
         case 'cardio':
             theZone.style.fill = 'red';
