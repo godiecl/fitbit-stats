@@ -106,8 +106,11 @@
       <text class="value-icon">⏲️</text>
     </g>
     <g transform="translate(114,130)">
-      <text class="value" id="user-rhr">60.8</text>
+      <text class="value" id="user-rhr">60</text>
       <text class="value-icon">❤️</text>
+    </g>
+    <g transform="translate(-90,100)">
+      <text class="value" id="user-lastsync">23m</text>
     </g>
   </g>
 
