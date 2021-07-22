@@ -6,27 +6,14 @@ const theValue = document.getElementById('battery-percent');
 const theIcon = document.getElementById('battery-icon');
 const theIconCharge = document.getElementById('battery-icon-charge');
 
-/**
- * Color code the battery level.
- * @param {Number} level - the level of battery.
- * @returns the battery color.
- */
-function getColor(level) {
-    if (level <= 20) {
-        return 'red';
-    }
-    if (level <= 80) {
-        return 'mint';
-    }
-    return 'white';
-}
+const colors = ['red', 'orange', 'peach', 'white', 'mint', 'mint'];
 
 function refresh() {
     // The value
     theValue.text = `${battery.chargeLevel}%`;
 
     // The color
-    theValue.style.fill = `fb-${getColor(battery.chargeLevel)}`;
+    theValue.style.fill = `fb-${colors[Math.floor(battery.chargeLevel / 20)]}`;
 
     // Change if connected
     if (charger.connected) {
@@ -37,7 +24,6 @@ function refresh() {
         theIconCharge.style.opacity = 0;
     }
 }
-
 
 export function initialize() {
     battery.onchange = () => {
