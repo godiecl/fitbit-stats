@@ -74,18 +74,18 @@
   </g>
 
   <g id="barometer">
-    <g transform="translate(116,-54)">
+    <g transform="translate(116,-53)">
       <text class="value" id="barometer-altitude">4800.1</text>
       <text class="value-icon">⛰️</text>
     </g>
-    <g transform="translate(116,-26)">
+    <g transform="translate(116,-25)">
       <text class="value" id="barometer-pressure">1234.5</text>
       <text class="value-icon">🌀</text>
     </g>
   </g>
 
   <g id="battery">
-    <g transform="translate(116,3)">
+    <g transform="translate(116,5)">
       <text class="value" id="battery-percent">100%</text>
       <text class="value-icon" id="battery-icon">🔋</text>
       <text class="value-icon" id="battery-icon-charge">⚡</text>
@@ -109,14 +109,14 @@
       <text class="value" id="user-rhr">60</text>
       <text class="value-icon">❤️</text>
     </g>
-    <g transform="translate(-90,100)">
+    <g transform="translate(-110,100)">
       <text class="value" id="user-lastsync">23m</text>
     </g>
   </g>
 
   <rect id="torch"/>
 
-  <text id="clock-touch" x="55" y="220" class="value-icon" pointer-events="visible">⌚</text>
+  <text id="clock-touch" x="55" y="220" class="value-icon" pointer-events="visible" opacity="0">⌚</text>
   <text id="torch-touch" x="300" y="262" class="value-icon" pointer-events="visible" font-size="34" opacity="0.2">💡</text>
 
   <g transform="translate(50%,50%)">
