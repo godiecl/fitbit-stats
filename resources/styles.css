@@ -1,6 +1,6 @@
 #root {
   font-family: "Tungsten-Medium";
-  fill: "fb-white";
+  fill: "fb-light-gray";
 }
 
 #background {
@@ -23,17 +23,15 @@
 /* Calendar ********************************** */
 
 #calendar-number {
-  x: "50%+30";
+  x: "50%+10";
   y: "50%";
   font-size: 36;
-  text-anchor: end;
 }
 
 #calendar-day {
-  x: "50%";
+  x: "50%-40";
   y: "50%";
   font-size: 36;
-  text-anchor: end;
 }
 
 /* Clock ************************************* */
@@ -43,12 +41,14 @@
   y: "50%";
   font-size: 100;
   text-anchor: end;
+  fill: "fb-white";
 }
 
 #clock-minutes {
   x: "50%-16";
   y: "50%";
   font-size: 100;
+  fill: "fb-white";
 }
 
 #clock-seconds {
@@ -98,6 +98,7 @@
   y: 50;
   text-anchor: middle;
   font-size: 16;
+  fill: "fb-white";
 }
 
 /* Profile *********************************** */

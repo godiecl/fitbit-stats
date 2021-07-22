@@ -6,7 +6,7 @@ const theValue = document.getElementById('battery-percent');
 const theIcon = document.getElementById('battery-icon');
 const theIconCharge = document.getElementById('battery-icon-charge');
 
-const colors = ['red', 'orange', 'peach', 'white', 'mint', 'mint'];
+const colors = ['red', 'orange', 'peach', 'light-gray', 'mint', 'mint'];
 
 function refresh() {
     // The value

@@ -44,9 +44,9 @@
     <text class="progress-goal">900</text>
   </g>
 
-  <g id="calendar" transform="translate(100,56)">
-    <text id="calendar-number">18</text>
+  <g id="calendar" transform="translate(94,56)">
     <text id="calendar-day">MON</text>
+    <text id="calendar-number">18</text>
   </g>
 
   <g id="clock" transform="translate(-20,104)">
@@ -117,7 +117,7 @@
   <rect id="torch"/>
 
   <text id="clock-touch" x="55" y="220" class="value-icon" pointer-events="visible" opacity="0">⌚</text>
-  <text id="torch-touch" x="300" y="262" class="value-icon" pointer-events="visible" font-size="34" opacity="0.2">💡</text>
+  <text id="torch-touch" x="304" y="262" class="value-icon" pointer-events="visible" font-size="34" opacity="0.2">💡</text>
 
   <g transform="translate(50%,50%)">
     <g id="clock-seconds-hand" opacity="0">
