@@ -53,7 +53,7 @@ function draw(rate) {
 
     let zone = user.heartRateZone(rate);
     zone = getZone(rate, zone);
-    theZone.text = zone.charAt(0).toUpperCase() + zone.slice(1); // .toUpperCase();// hr_zone.charAt(0).toUpperCase() + hr_zone.slice(1);
+    theZone.text = zone.charAt(0).toUpperCase() + zone.slice(1);
 
     // eslint-disable-next-line default-case
     switch (zone) {
@@ -144,6 +144,8 @@ export function onPresent() {
 
 export function onAbsent() {
     onScreenOff();
-    theZone.text = 'No Data';
+    theZone.text = 'No-data';
     theValue.text = '---';
+    theZone.style.fill = 'fb-light-gray';
+    theValue.style.fill = 'fb-light-gray';
 }
