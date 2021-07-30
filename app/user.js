@@ -14,22 +14,16 @@ function getTimeInterval(date) {
         return "--";
     }
     const seconds = Math.floor((Date.now() - date) / 1000);
-    let unit = "s";
-    let value = seconds;
-    if (seconds >= 31536000) {
-        value = Math.floor(seconds / 31536000);
-        unit = "y";
-    } else if (seconds >= 86400) {
-        value = Math.floor(seconds / 86400);
-        unit = "d";
-    } else if (seconds >= 3600) {
-        value = Math.floor(seconds / 3600);
-        unit = "h";
-    } else if (seconds >= 60) {
-        value = Math.floor(seconds / 60);
-        unit = "m";
+    if (seconds >= 86400) {
+        return `${Math.floor(seconds / 86400)}d`;
     }
-    return `${value}${unit}`;
+    if (seconds >= 3600) {
+        return `${Math.floor(seconds / 3600)}h`;
+    }
+    if (seconds >= 60) {
+        return `${Math.floor(seconds / 60)}m`;
+    }
+    return `${seconds}s`;
 }
 
 export function initialize() {
