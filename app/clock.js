@@ -18,12 +18,16 @@ function zeroPad(i) {
   return i < 10 ? `0${i}` : i;
 }
 
-function draw(evt) {
+function drawDate(date) {
   // Update the hour an minutes
-  theHour.text = evt.date.getHours();
-  theMinutes.text = `.${zeroPad(evt.date.getMinutes())}`;
+  theHour.text = date.getHours();
+  theMinutes.text = `.${zeroPad(date.getMinutes())}`;
   // Update the seconds
-  theSeconds.text = zeroPad(evt.date.getSeconds());
+  theSeconds.text = zeroPad(date.getSeconds());
+}
+
+function draw(evt) {
+  drawDate(evt.date);
 }
 
 function turnOnSecondHand() {
@@ -65,6 +69,10 @@ export function initialize() {
 export function onScreenOn() {
   // Start the draw of time
   clock.addEventListener('tick', draw);
+
+  // Draw!
+  drawDate(new Date());
+
   // Show the time
   theHour.style.opacity = 1;
   theMinutes.style.opacity = 1;
