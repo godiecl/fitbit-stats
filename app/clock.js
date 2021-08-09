@@ -65,6 +65,9 @@ export function initialize() {
 export function onScreenOn() {
   // Start the draw of time
   clock.addEventListener('tick', draw);
+  // Show the time
+  theHour.style.opacity = 1;
+  theMinutes.style.opacity = 1;
 }
 
 export function onScreenOff() {
@@ -72,6 +75,10 @@ export function onScreenOff() {
   theSecondsHand.style.opacity = 0;
   clearInterval(theMillisTimer);
   theMillisTimer = null;
+
+  // Hide the time
+  theHour.style.opacity = 0;
+  theMinutes.style.opacity = 0;
 }
 
 export function onPresent() {
