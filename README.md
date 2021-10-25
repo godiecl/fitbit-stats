@@ -42,3 +42,5 @@ Old version:
 ## License
 
 This code is licensed under the [MIT License](./LICENSE).
+
+![Counter](https://pimp-my-readme.webapp.io/pimp-my-readme/visitor-counter?page=fitbit-stats)
